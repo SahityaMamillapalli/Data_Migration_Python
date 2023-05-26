@@ -1,0 +1,27 @@
+2023-04-05 19:07:22,273 - my_logger - INFO - Input file path: input/input.xlsx
+2023-04-05 19:07:22,274 - my_logger - INFO - Output file path: outputs/output.csv
+2023-04-05 19:07:22,274 - my_logger - INFO - Solution file path: outputs/solution.csv
+2023-04-05 19:07:22,274 - my_logger - INFO - Transformations: [{'action': 'replace_substring', 'source': 'FileLocation', 'target': 'file', 'old': 'FileLocation', 'new': 'file'}, {'action': 'key_value_translate', 'source': 'Validated?', 'target': 'validated', 'translate_dict': {'Yes': 'TRUE', 'No': 'FALSE', 'no': 'FALSE', 'Yes ': 'TRUE'}}, {'action': 'constant', 'target': 'source', 'value': 'Migration'}, {'action': 'concat', 'target': 'document_number', 'source': ['DocNumber', 'DocVersion']}, {'action': 'insert', 'source': 'DocVersion', 'target': 'major_version__v'}]
+2023-04-05 19:07:22,275 - my_logger - INFO - filter: None
+2023-04-05 19:07:22,275 - my_logger - INFO - Class name -> bmf.bmf.storage.Storage Method name is ->_get_reader
+2023-04-05 19:07:22,275 - my_logger - INFO - extension is : xlsx
+2023-04-05 19:07:22,275 - my_logger - INFO - Reading file input/input.xlsx with extension xlsx
+2023-04-05 19:07:23,155 - my_logger - INFO - Reading input file : input/input.xlsx
+2023-04-05 19:07:23,166 - my_logger - INFO - Transformation name: {'action': 'replace_substring', 'source': 'FileLocation', 'target': 'file', 'old': 'FileLocation', 'new': 'file'}
+2023-04-05 19:07:23,779 - my_logger - INFO - Transformation name: {'action': 'key_value_translate', 'source': 'Validated?', 'target': 'validated', 'translate_dict': {'Yes': 'TRUE', 'No': 'FALSE', 'no': 'FALSE', 'Yes ': 'TRUE'}}
+2023-04-05 19:07:24,340 - my_logger - INFO - Transformation name: {'action': 'constant', 'target': 'source', 'value': 'Migration'}
+2023-04-05 19:07:24,891 - my_logger - INFO - Transformation name: {'action': 'concat', 'target': 'document_number', 'source': ['DocNumber', 'DocVersion']}
+2023-04-05 19:07:25,436 - my_logger - INFO - Transformation name: {'action': 'insert', 'source': 'DocVersion', 'target': 'major_version__v'}
+2023-04-05 19:07:25,975 - my_logger - INFO - Unique target columns in output file : ['file', 'validated', 'source', 'document_number', 'major_version__v']
+2023-04-05 19:07:25,979 - my_logger - INFO - Class name -> bmf.bmf.storage.Storage Method name is ->write
+2023-04-05 19:07:25,980 - my_logger - INFO - extension is : csv
+2023-04-05 19:07:25,987 - my_logger - INFO - Writing output file : outputs/output.csv
+2023-04-05 19:07:25,987 - my_logger - INFO - Class name -> bmf.bmf.storage.Storage Method name is ->_get_reader
+2023-04-05 19:07:25,987 - my_logger - INFO - extension is : csv
+2023-04-05 19:07:25,987 - my_logger - INFO - Reading file outputs/output.csv with extension csv
+2023-04-05 19:07:26,009 - my_logger - INFO - For validation purpose reading output file : outputs/output.csv
+2023-04-05 19:07:26,009 - my_logger - INFO - Class name -> bmf.bmf.storage.Storage Method name is ->_get_reader
+2023-04-05 19:07:26,010 - my_logger - INFO - extension is : csv
+2023-04-05 19:07:26,010 - my_logger - INFO - Reading file outputs/solution.csv with extension csv
+2023-04-05 19:07:26,017 - my_logger - INFO - For validation purpose reading solution file : outputs/solution.csv
+2023-04-05 19:07:26,018 - my_logger - INFO - output file and solution file both are identical

@@ -1,0 +1,49 @@
+
+input_file: input/input.xlsx
+
+output_file: outputs/output.csv
+
+solution_file: outputs/solution.csv
+
+#filter: "Country in ['Spain', 'Germany']"
+
+transformations:
+
+  - action: replace_substring
+    source: FileLocation
+    target: file
+    old: FileLocation
+    new: file
+
+  - action: key_value_translate
+    source: Validated?
+    target: validated
+    translate_dict:
+        "Yes": "TRUE"
+        "No": "FALSE"
+        "no": "FALSE"
+        "Yes ": "TRUE"
+
+
+
+  - action: constant
+    target: source
+    value: Migration
+
+  - action: concat
+    target: document_number
+    source: ["DocNumber","DocVersion"]
+
+
+  - action: insert
+    source: DocVersion
+    target: major_version__v
+
+
+
+
+
+
+
+
+
